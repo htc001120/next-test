@@ -15,7 +15,7 @@ const SearchResultList = () => {
     <List component="nav">
       {
         items.map((item) => (
-          <ListItem alignItems="flex-start">
+          <ListItem alignItems="flex-start" key={item.colloectionId}>
             <ListItemAvatar>
               <Avatar alt="Remy Sharp" src={item.artworkUrl30} />
             </ListItemAvatar>

@@ -4,6 +4,8 @@ const search = (state = { items: [] }, action) => {
       return {
           ...state,
           items: action.payload.results,
+          total: action.payload.resultCount,
+          keyword: action.payload.keyword,
       }
     default:
         return state

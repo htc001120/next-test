@@ -4,8 +4,7 @@ import Api from './api';
 function* searchItems(action) {
    try {
       const response = yield call(Api.searchItems, action.payload.keyword);
-      console.log(response);
-      yield put({ type: "SEARCH_ITEMS_SUCCESS", payload: response });
+      yield put({ type: "SEARCH_ITEMS_SUCCESS", payload: { ...response, keyword: action.payload.keyword } });
    } catch (e) {
       console.error(e.message);
       yield put({ type: "SEARCH_ITEMS_FAILED", message: e.message });

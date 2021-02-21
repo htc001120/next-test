@@ -22,15 +22,15 @@ const SearchField =  ({ search }: ISearchFieldProps) => {
   };
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', p: 1 }}>
       <TextField
         id="filled-basic"
         label="Keyword"
-        variant="filled"
+        variant="standard"
         value={keyword}
         onChange={handleChange}
       />
-      <Button variant="contained" onClick={handleClick}>Search</Button>
+      <Button variant="contained" onClick={handleClick} disabled={keyword.length === 0}>Search</Button>
     </Box>
   )
 };

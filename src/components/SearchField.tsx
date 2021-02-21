@@ -18,7 +18,7 @@ const SearchField =  ({ search }: ISearchFieldProps) => {
   };
 
   const handleClick = () => {
-    dispatch({type: 'SEARCH_ITEMS_REQUESTED', payload: { keyword }})
+    dispatch({ type: 'SEARCH_ITEMS_REQUESTED', payload: { keyword } });
   };
 
   return (

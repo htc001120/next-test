@@ -1,15 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Box from '@material-ui/core/Box';
 import SearchField from './components/SearchField';
 import Result from './components/Result';
 
 function App() {
   return (
-    <div className="App">
+    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
       <SearchField search={() => {}} />
       <Result />
-    </div>
+    </Box>
   );
 }
 
